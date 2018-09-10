@@ -1,0 +1,531 @@
+@supports (grid-area:auto) {
+  .site{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 30px 100px 30px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 1fr 100px 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'hd hd hd hd hd hd hd hd'
+    'nv nv nv nv nv nv nv nv'
+    'space dash dash dash dash dash dash space'
+    'space tasks tasks analytic analytic analytic analytic space'
+    'space tasks tasks analytic analytic analytic analytic space'
+    'space tasks tasks contacts contacts contacts contacts spacet'
+    'space tasks tasks contacts contacts contacts contacts spacet'
+    'space ads ads ads ads ads ads space'
+    'space footer footer footer footer footer footer space';
+
+    background-color: white;
+  }
+
+/* the very top blue bar */
+  .header {
+    grid-column: 1/9;
+    grid-row: 1/2;
+    background: #2497f3;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-around;
+    padding-left: 75%;
+    padding-right: 5%;
+    font-family: Proxima Nova;
+    font-weight: bold;
+  }
+/* the top part of the navigation bar that includes the icons and stripes */
+  .navb {
+    grid-column: 1/9;
+    background-color: #14457f;
+    background: repeating-linear-gradient(
+      -55deg,
+      #14457f,
+      #14457f 1px,
+      #0e3f70 2px,
+      #0e3f70 4px
+      );
+    }
+    .icon-dashboard {
+      transform: translateY(5%);
+    }
+
+    .icon-customers {
+      transform: translateY(12%);
+    }
+
+    .icon-messages {
+      transform: translateY(16%);
+    }
+
+    .icon-promotions {
+      transform: translateY(10%);
+    }
+
+    .icon-page-creator {
+      transform: translateY(6%);
+    }
+
+    .icon-analytics {
+      transform: translateY(11%);
+    }
+/* the bottom part of the navigation bar that includes the shadows and radial gradient */
+    .nava {
+      background-color: #14457f;
+      grid-column: 1/9 ;
+      grid-row: 3/4;
+
+    }
+    #center {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 15px;
+      justify-content: space-around;
+      padding-left: 25%;
+      padding-right: 25%;
+
+    }
+
+    #shadows {
+      display: flex;
+      align-items: top;
+      flex-wrap: wrap;
+      padding-bottom: 15px;
+      justify-content: space-around;
+      padding-left: 25%;
+      padding-right: 24%;
+      background-image: radial-gradient( farthest-corner at 50% 20%, #136399, #0e3f70, #0e3f70);
+    }
+
+    .icon-shadow {
+      position: relative;
+      top: 70%;
+      transform: translateY(-50%);
+    }
+/* the green dashboard section and the search bar */
+    .dash {
+      grid-column: 2/8;
+      background-color: #33cc66;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      color: white;
+      display:inline-flex;
+      align-items: center;
+      font-family: Myriad Pro;
+      font-size: 28px;
+      text-indent: 3%;
+    }
+
+    .icon-search {
+      position: absolute;
+      right: 6%;
+      justify-content: center;
+      margin-top: 3px;
+      color: white;
+    }
+
+    #rectangle {
+      height: 29px;
+      width: 200px;
+      background-color: white ;
+      position: absolute;
+      right: 15%;
+      justify-content: center;
+    }
+
+    /* the announcements section */
+
+    .ann {
+      grid-column: 2/8;
+      grid-row: 5/6;
+      background-color: white;
+      font-family: Myriad Pro;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      border-style: solid;
+      border-color: grey;
+      border-width: thin;
+      padding: 5px;
+    }
+
+    #announce {
+      flex-basis: 15%;
+      color: orange;
+      border-right: solid thin grey;
+      line-height: 30px;
+      padding-left: 1%;
+
+    }
+
+    #gibberish {
+      flex-basis: 78%;
+      color: grey;
+      padding-left: 1%;
+      border-right: solid thin grey;
+      line-height: 30px;
+    }
+
+
+    #buttons {
+      flex-basis: 7%;
+      padding-left: 1%;
+      padding-top: 3px;
+    }
+
+  /* the tasks section with its 4 subsections */
+
+    .tasks {
+      grid-column: 2/4;
+      grid-row: 6/7;
+      background-color: white;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    #tasktitle {
+      font-family: Myriad Pro;
+      font-size: 26px;
+      color: #2497f3;
+      flex-basis: 88%;
+      padding-left: 1%;
+      padding-top: 3%;
+    }
+
+    #settingsgrey {
+      flex-basis: 12%;
+      margin-top: 4%;
+    }
+
+    .tasks2 {
+      grid-column: 2/4;
+      grid-row: 7/8;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+    }
+
+
+    .spanned {
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    background-color: #33cc66;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+    .tasklist {
+      flex-basis: 75%;
+      font-family: Myriad Pro;
+      font-size: 16px;
+      color: #2497f3;
+      margin-left: 5px;
+
+    }
+
+    .users {
+      flex-basis: 15%;
+      border-style: solid;
+      border-color: grey;
+      border-width: thin;
+      display: inline-flex;
+      align-items: center;
+      padding: 2px;
+      margin-right: 4%;
+    }
+
+    .numero {
+        font-size: 16px;
+        font-family: Myriad Pro;
+        padding-top: 4px;
+        padding-left: 4px;
+        color: #2497f3;
+    }
+
+    .tasks3 {
+      grid-column: 2/4;
+      grid-row: 8/9;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+    }
+
+    .tasks4 {
+      grid-column: 2/4;
+      grid-row: 9/10;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+    }
+
+    .tasks5 {
+      grid-column: 2/4;
+      grid-row: 10/11;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+    }
+
+  /* the reccomendations section */
+
+    .recc {
+      grid-column: 2/4;
+      grid-row: 11/12;
+      font-family: Myriad Pro;
+      font-size: 26px;
+      color: #2497f3;
+      flex-basis: 88%;
+      padding-left: 1%;
+      padding-top: 3%;
+    }
+
+    .recc2 {
+      grid-column: 2/4;
+      grid-row: 12/13;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+
+    }
+
+    .littleword {
+      font-family: Myriad Pro;
+      font-size: 9px;
+      color: grey;
+      margin-bottom: 2px;
+    }
+
+    .bigword {
+      font-family: Myriad Pro;
+      font-size: 14px;
+      color: grey;
+      margin-top: 2px;
+    }
+
+    .icon-article {
+      flex-basis: 9%;
+      padding-bottom: 16px;
+    }
+
+    .recc3 {
+      grid-column: 2/4;
+      grid-row: 13/14;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+    }
+
+    .recc4 {
+      grid-column: 2/4;
+      grid-row: 14/15;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+
+    }
+
+    .icon-checklist {
+      flex-basis: 9%;
+      padding-bottom: 10px;
+    }
+
+    .recc5 {
+      grid-column: 2/4;
+      grid-row: 15/16;
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+    }
+
+    .icon-tip {
+      flex-basis: 8%;
+      padding-bottom: 10px;
+    }
+
+    .spaces {
+      grid-column: 2/4;
+      grid-row: 16/17;
+      background-color: white;
+    }
+
+      /* the analytics section with the graph and custom select menu */
+
+    .anal {
+      grid-column: 4/7;
+      grid-row: 6/12;
+      background-color: white;
+    }
+
+    #analtitle {
+      font-family: Myriad Pro;
+      font-size: 26px;
+      color: #2497f3;
+      padding-top: 5%;
+    }
+
+    #graph {
+    height: auto;
+    width: auto;
+    max-width: 400px;
+      }
+
+    .active {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    #activityword {
+      margin-left: 3%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      color: grey;
+      font-size: 15px;
+    }
+
+    .selections {
+      padding-left: 65%;
+    }
+  /* the social media checkbox section */
+    .socially {
+      grid-column: 4/8;
+      grid-row: 12/13;
+      background-color: white;
+      align-items: center;
+      font-family: Myriad Pro;
+      color: white;
+    }
+
+    #sociallyawkward {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-left: 10%;
+      margin-right: 15%;
+    }
+
+
+    #facebook {
+    flex-basis: 15%;
+    background-color: #3B5998;
+    border-radius: 10%;
+    padding: 3px;
+    padding-left: 5px;
+    }
+
+    #twitter {
+    flex-basis: 15%;
+    background-color: #1DA1F2;
+    border-radius: 10%;
+    padding: 3px;
+    padding-left: 5px;
+    }
+
+    #foursquare {
+    flex-basis: 15%;
+    background-color: #0732a2;
+    border-radius: 10%;
+    padding: 3px;
+    padding-left: 5px;
+    }
+
+    #google {
+    flex-basis: 15%;
+    background-color: #DB4437;
+    border-radius: 10%;
+    padding: 3px;
+    padding-left: 5px;
+    }
+
+    /* the pie graph section */
+
+    .pie {
+      grid-column: 7/8;
+      grid-row: 6/12;
+      background-color: white;
+
+    }
+
+    #channelsword {
+      color: grey;
+      padding-top: 40%;
+      font-size: 15px;
+    }
+
+    .applepie {
+      height: auto;
+      width: auto;
+      max-width:100px;
+    }
+
+  /* the contacts section */
+
+    .cont {
+      grid-column: 4/8;
+      grid-row: 13/17;
+      background-color: #FF0000;
+    }
+
+  /* the blue "DID YOU KNOW" section under the contacts */
+    .bluebox {
+      grid-column: 4/8;
+      grid-row: 17/19;
+      background-color: white;
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .bluerectangle {
+      position: relative;
+      width: 95%;
+      height: 80%;
+      overflow: hidden;
+      background: #2497f3;
+      margin-left: 15px;
+      margin-top: 5px;
+      display: inline-block;
+      align-items: center;
+    }
+
+    .bluerectangle span {
+      display: table-cell;
+      padding-left: 40px;
+      padding-top: 30px;
+      color: white;
+      display: inline-block;
+      align-items: center;
+      vertical-align: middle;
+    }
+
+    #leftknow {
+      flex-basis: 50%;
+    }
+
+    #rightknow {
+      flex-basis: 50%;
+    }
+
+  /* the ads section at the bottom of the page*/
+    .ad {
+      grid-column: 2/8;
+      grid-row: 19/21;
+      background-color: #D2691E;
+    }
+  /* the footer section with various links, the avatar, and social media icons */
+    .footr {
+      grid-column: 2/8;
+      grid-row: 21/22;
+      background-color: #D3D3D3;
+    }
+  }
